@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ with $.Site.GetPage "/categories" }}
+    {{ range .Pages.ByWeight }}
+      <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+      <ul class="blog-posts">
+          {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+{{ end }}

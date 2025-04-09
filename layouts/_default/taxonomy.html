@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <ul class="blog-posts">
+    {{ range .Data.Terms.Alphabetical }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+    </li>
+    {{ else }}
+    <li>
+      No posts yet
+    </li>
+    {{ end }}
+  </ul>
+{{ end }}

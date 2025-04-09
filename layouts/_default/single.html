@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ if eq .Type "recipes" }}{{ if not .Params.menu }}
+<h1>{{ .Title }}</h1>
+<h4><a href='{{ add .Path ".pdf" }}'>View recipe as PDF</a></h4>
+{{ end }}{{ end }}
+<content>
+  {{ .Content }}
+</content>
+<p>
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
