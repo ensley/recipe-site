@@ -2,6 +2,12 @@
 
 <https://joycesrecipes.net>
 
+## Creating the PDFs
+
+The `convert-pdf.sh` script uses [Pandoc](https://pandoc.org/) to convert the Markdown files in `content/recipes` into
+PDFs. Each recipe page on the website contains a link to the corresponding PDF. This is not part of the `hugo build`
+process that builds the HTML pages, hence the need for the script.
+
 ## Building the site
 
 ```shell
