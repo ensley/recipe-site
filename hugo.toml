@@ -1,4 +1,4 @@
-baseURL = "http://joyces-recipes.s3-website-us-east-1.amazonaws.com"
+baseURL = "http://joycesrecipes.net"
 theme = "hugo-bearblog"
 title = "Joyce's Recipes"
 author = "John Ensley"
